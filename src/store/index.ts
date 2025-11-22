@@ -93,7 +93,7 @@ const hashString = (str: string): number => {
 
 // Transform API product to app Product format
 const transformApiProduct = (apiProduct: ApiProduct, index?: number): Product => {
-  const baseUrl = 'http://127.0.0.1:8000/';
+  const baseUrl = 'https://api-noa-gab.onrender.com/';
   // Generate unique ID from product name if not provided by API
   const productId = apiProduct.id || hashString(apiProduct.nom + apiProduct.prix);
 
@@ -203,8 +203,8 @@ export default createStore({
     authenticated: false,
     hasSeenDidactitielAt: '',
     notificationCount: 0,
-    api_url: 'http://127.0.0.1:8000',
-    app_url: 'http://localhost:8100',
+    api_url: 'https://api-noa-gab.onrender.com',
+    app_url: 'https://noagab-mini-shop.vercel.app',
     user: null,
     fetchInterval: null,
     products: [],
